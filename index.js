@@ -60,4 +60,11 @@ const stringify = (str) => Array.from(str).map(
 
 const transpile = (str) => `${table.func}(${stringify(str)})()`
 
-console.log(transpile('console.log("Hello, World!")'))
+window.onload = () => {
+  const inputBox = document.getElementById('input')
+  const outputBox = document.getElementById('output')
+
+  document.getElementById('btn').addEventListener('click', () => {
+    outputBox.value = transpile(inputBox.value)
+  })
+}
