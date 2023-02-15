@@ -1,29 +1,17 @@
 <html>
   <head>
-    <style>
-      .container {
-        padding: 20px;
-        display: flex;
-      }
-      .input1 {
-        margin: 5px;
-      }
-      .input2 {
-        margin: 5px;
-      }
-      .butt, p {
-        margin-left: 25px;
-        margin-top: 20px;
-      }
-    </style>
     <script type="text/javascript" src="index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
   </head>
-  <body>
-    <button id="btn" type="text" class="butt">convert</button>
-    <div class="container">
-      <textarea id="input" rows="40" cols="80" placeholder="paste your javascript here" class="input1"></textarea>
-      <textarea id="output" rows="40" cols="80" placeholder="jsFuck will appear here" class="input2"></textarea>
+  <body class='bg-[#181926] text-[#eff1f5] font-mono m-0 overflow-hidden'>
+    <div class="flex flex-col md:flex-row m-8 max-w-[1240px] w-full h-[90%] mx-auto justify-center">
+      <textarea id="input" placeholder="paste your javascript here" class="m-2 md:my-auto max-h-[480px] resize-none w-full h-full bg-[#313244] p-4 border-0 rounded shadow outline-none focus:outline-none focus:ring-0"></textarea>
+      <button id="convert-button" type="text" class="text-lg mx-4 p-4 h-16 md:my-auto">&gt</button>
+      <div class='flex flex-col m-2 md:my-auto max-h-[480px] resize-none w-full h-full bg-[#313244]'>
+        <textarea id="output" disabled placeholder="jsFuck will appear here" class="resize-none w-full h-full bg-[#313244] p-4 border-0 rounded shadow outline-none focus:outline-none focus:ring-0"></textarea>
+        <button id='copy-button' type="text" class='mx-auto my-2 px-4 py-1 rounded-lg '>copy</button>
+      </div>
     </div>
-    <p>src: <a href="https://github.com/ashis0013/haga-js">https://github.com/ashis0013/haga-js</a></p>
   </body>
 </html>
